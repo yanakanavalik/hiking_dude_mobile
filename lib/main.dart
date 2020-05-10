@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:hiking_dude_mobile/pages/home/index.dart' as HomePage;
 import 'package:hiking_dude_mobile/pages/menu/Menu.dart' as MenuPage;
 import 'package:hiking_dude_mobile/pages/login/LogIn.dart' as LogInPage;
+import 'package:hiking_dude_mobile/pages/boards/Boards.dart' as BoardsPage;
 
 void main() => runApp(App());
 
@@ -19,7 +20,7 @@ class App extends StatelessWidget {
           '/': (context) => HomePage.Home(),
           '/menu': (context) => MenuPage.Menu(),
           '/login': (context) => LogInPage.LogIn(),
-          '/boards': (context) => MenuPage.Menu(),
+          '/boards': (context) => BoardsPage.Boards(),
         },
         theme: theme.copyWith(
           appBarTheme: AppBarTheme(

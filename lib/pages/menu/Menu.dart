@@ -31,7 +31,7 @@ class MenuBody extends StatelessWidget {
           children: <Widget>[
             FlatButton(
               child: Text('Explore boards'),
-              onPressed: () => {},
+              onPressed: () => Navigator.pushNamed(context, '/boards'),
             ),
             FlatButton(
               child: Text('Go to cabinet'),
