@@ -58,8 +58,8 @@ class OnboardingState extends State<Onboarding> {
                           children: [
                             ButtonRounded(
                                 'SIGN UP', () => print('sign up was tapped')),
-                            ButtonRounded(
-                                'LOGIN', () => print('login was tapped'))
+                            ButtonRounded('LOGIN',
+                                () => Navigator.pushNamed(context, '/login'))
                           ])
                     ])
               ],

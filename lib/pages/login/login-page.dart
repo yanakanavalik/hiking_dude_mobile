@@ -12,7 +12,7 @@ class LogIn extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: <Widget>[
           IconButton(
-            icon: Icon(CustomIcons.MyFlutterApp.menu),
+            icon: Icon(CustomIcons.MyFlutterApp.arrow_back),
             iconSize: 32,
             padding: const EdgeInsets.all(20.0),
             color: Color(0xffFF485A),
