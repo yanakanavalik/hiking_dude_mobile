@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "662995311811",
+    "firebase_url": "https://hiking-dude-1584307636640.firebaseio.com",
+    "project_id": "hiking-dude-1584307636640",
+    "storage_bucket": "hiking-dude-1584307636640.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662995311811:android:bf1c83de63130d09ae1676",
+        "android_client_info": {
+          "package_name": "yana.kanavalik.hikingdude"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662995311811-v5pc5es36vmkf1urr2v62pnf9t67d1i1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDsE9sxB4oC966e73xqkPkHff2Wjzt4cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662995311811-v5pc5es36vmkf1urr2v62pnf9t67d1i1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "662995311811-179o15pk77kftcgq01g88a1tl6uomjn2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "yana.kanavalik.hikingdude"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
