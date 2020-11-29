@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>662995311811-179o15pk77kftcgq01g88a1tl6uomjn2.apps.googleusercontent.com</string>
+	<string>662995311811-jekde1bsjrccm80menl0tf9b3k7ndsa4.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.662995311811-179o15pk77kftcgq01g88a1tl6uomjn2</string>
+	<string>com.googleusercontent.apps.662995311811-jekde1bsjrccm80menl0tf9b3k7ndsa4</string>
 	<key>API_KEY</key>
 	<string>AIzaSyD6LBTOW46a5j7Ry3ApEjE6i9NElnHsO1E</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>yana.kanavalik.hikingdude</string>
+	<string>com.example.hikingDudeMobile</string>
 	<key>PROJECT_ID</key>
 	<string>hiking-dude-1584307636640</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:662995311811:ios:d3dd1328ecbaa8dbae1676</string>
+	<string>1:662995311811:ios:95377a79daaf6cccae1676</string>
 	<key>DATABASE_URL</key>
 	<string>https://hiking-dude-1584307636640.firebaseio.com</string>
 </dict>

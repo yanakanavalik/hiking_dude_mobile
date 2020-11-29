@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hiking_dude_mobile/common/colors.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:hiking_dude_mobile/pages/home/index.dart' as HomePage;
-import 'package:hiking_dude_mobile/pages/menu/menu-page.dart' as MenuPage;
-import 'package:hiking_dude_mobile/pages/login/login-page.dart' as LogInPage;
-import 'package:hiking_dude_mobile/pages/onboarding/onboarding-page.dart'
-    as OnboardingPage;
+import 'package:hiking_dude_mobile/pages/menu/menu-page.dart';
+import 'package:hiking_dude_mobile/pages/login/login-page.dart';
+import 'package:hiking_dude_mobile/pages/onboarding/onboarding-page.dart';
+import 'package:hiking_dude_mobile/pages/sign-up/sign-up-page.dart';
+import 'pages/main-tabs/main-tabs.dart';
 
 void main() {
   runApp(App());
@@ -25,6 +25,7 @@ class _AppState extends State<App> {
     try {
       // Wait for Firebase to initialize and set `_initialized` state to true
       await Firebase.initializeApp();
+
       setState(() {
         _initialized = true;
       });
@@ -51,19 +52,18 @@ class _AppState extends State<App> {
     return MaterialApp(
         title: 'Hiking dude',
         routes: {
-          '/': (context) => OnboardingPage.Onboarding(),
-          '/home': (context) => HomePage.Home(),
-          '/menu': (context) => MenuPage.Menu(),
-          '/login': (context) => LogInPage.LogIn(),
-          '/boards': (context) => MenuPage.Menu(),
+          '/': (context) => Onboarding(),
+          '/main': (context) => MainTabs(),
+          '/login': (context) => LoginPage(),
+          '/sign-in': (context) => SignUpPage(),
+          '/boards': (context) => Menu(),
         },
+        color: AppColors.white,
         theme: theme.copyWith(
           backgroundColor: AppColors.white,
           appBarTheme: AppBarTheme(
             elevation: 0,
-            textTheme: theme.textTheme.copyWith(
-              title: theme.textTheme.title.copyWith(fontSize: 20.0),
-            ),
+            color: AppColors.white,
             iconTheme: theme.iconTheme,
           ),
         ));

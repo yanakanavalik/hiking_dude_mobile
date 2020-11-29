@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:662995311811:android:bf1c83de63130d09ae1676",
+        "mobilesdk_app_id": "1:662995311811:android:47be53fdb1dd9d9dae1676",
         "android_client_info": {
-          "package_name": "yana.kanavalik.hikingdude"
+          "package_name": "com.example.hiking_dude_mobile"
         }
       },
       "oauth_client": [

@@ -3,16 +3,16 @@ import 'package:flutter/widgets.dart';
 import 'package:hiking_dude_mobile/common/colors.dart';
 import 'package:hiking_dude_mobile/common/text-styles.dart';
 import 'package:hiking_dude_mobile/elements/back-button.dart';
-import 'package:hiking_dude_mobile/widgets/login-form/login-form.dart';
+import 'package:hiking_dude_mobile/widgets/sign-up-form/sign-up-form.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage();
+class SignUpPage extends StatefulWidget {
+  SignUpPage();
 
   @override
-  LoginPageState createState() => LoginPageState();
+  SignUpPageState createState() => SignUpPageState();
 }
 
-class LoginPageState extends State<LoginPage> {
+class SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -22,7 +22,7 @@ class LoginPageState extends State<LoginPage> {
             appBar: AppBar(
               automaticallyImplyLeading: false,
               leading: BackArrowButton(),
-              title: Text('Login', style: titleTS(color: AppColors.pink)),
+              title: Text('Sign in', style: titleTS(color: AppColors.pink)),
               centerTitle: true,
               backgroundColor: Colors.transparent,
             ),
@@ -31,12 +31,12 @@ class LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   Text(
-                    'Please, enter your email and password:',
+                    'Please, enter some info for your account:',
                     style: titleTS(color: AppColors.middleGray),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 30),
-                  LoginForm(),
+                  SignUpForm(),
                 ],
               ),
             )),

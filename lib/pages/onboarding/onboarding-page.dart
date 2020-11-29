@@ -56,8 +56,8 @@ class OnboardingState extends State<Onboarding> {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            ButtonRounded(
-                                'SIGN UP', () => print('sign up was tapped')),
+                            ButtonRounded('SIGN UP',
+                                () => Navigator.pushNamed(context, '/sign-in')),
                             ButtonRounded('LOGIN',
                                 () => Navigator.pushNamed(context, '/login'))
                           ])
@@ -97,8 +97,10 @@ class OnboardingState extends State<Onboarding> {
 
   Widget _buildOnboardingPage(String mainText, String backgroudAsset) {
     return Material(
+      color: AppColors.white,
       child: Container(
         decoration: BoxDecoration(
+          color: AppColors.white,
           image: DecorationImage(
             image: AssetImage(backgroudAsset),
             fit: BoxFit.cover,
