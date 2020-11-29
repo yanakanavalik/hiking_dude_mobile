@@ -1,6 +1,5 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:hiking_dude_mobile/assets/icons/my_flutter_app_icons.dart'
-    as CustomIcons;
 
 class Home extends StatelessWidget {
   @override
@@ -9,15 +8,6 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('Hiking dude'),
         automaticallyImplyLeading: false,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(CustomIcons.MyFlutterApp.menu),
-            iconSize: 32,
-            padding: const EdgeInsets.all(20.0),
-            color: Color(0xffFF485A),
-            onPressed: () => Navigator.pushNamed(context, '/menu'),
-          ),
-        ],
       ),
       body: Center(
         child: Container(

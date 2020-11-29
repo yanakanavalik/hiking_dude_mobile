@@ -1,6 +1,9 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:hiking_dude_mobile/common/colors.dart';
-import 'package:hiking_dude_mobile/elements/circle-painter.dart';
+
+// Project imports:
+import '../common/colors.dart';
+import 'circle_painter.dart';
 
 class Paging extends StatelessWidget {
   Paging(this.currentPageIndex, this.listOfPagesIndexes,

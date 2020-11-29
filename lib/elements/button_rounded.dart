@@ -1,6 +1,9 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:hiking_dude_mobile/common/colors.dart';
-import 'package:hiking_dude_mobile/common/text-styles.dart';
+
+// Project imports:
+import '../common/colors.dart';
+import '../common/text_styles.dart';
 
 class ButtonRounded extends StatelessWidget {
   const ButtonRounded(
