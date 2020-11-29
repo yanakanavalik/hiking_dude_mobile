@@ -1,24 +1,26 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hiking_dude_mobile/common/colors.dart';
-import 'package:hiking_dude_mobile/common/text-styles.dart';
 
-class SignUpForm extends StatefulWidget {
-  SignUpForm();
+// Package imports:
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+// Project imports:
+import '../../common/colors.dart';
+import '../../common/text_styles.dart';
+
+class LoginForm extends StatefulWidget {
+  LoginForm();
 
   @override
-  SignUpFormState createState() => SignUpFormState();
+  LoginFormState createState() => LoginFormState();
 }
 
-class SignUpFormState extends State<SignUpForm> {
+class LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
 
-  String _name;
-  String _surname;
   String _email;
-  String _residence;
   String _password;
 
   @override
@@ -26,28 +28,11 @@ class SignUpFormState extends State<SignUpForm> {
     return Form(
       key: _formKey,
       child: Column(children: <Widget>[
-        _createFormTextField(
-          hintText: 'Name',
-          type: TextInputType.name,
-          onSave: (value) => setState(() => _name = value),
-        ),
-        const SizedBox(height: 40),
-        _createFormTextField(
-          hintText: 'Surname',
-          type: TextInputType.text,
-          onSave: (value) => setState(() => _surname = value),
-        ),
         const SizedBox(height: 40),
         _createFormTextField(
           hintText: 'Email',
           type: TextInputType.emailAddress,
           onSave: (value) => setState(() => _email = value),
-        ),
-        const SizedBox(height: 40),
-        _createFormTextField(
-          hintText: 'Residence',
-          type: TextInputType.text,
-          onSave: (value) => setState(() => _residence = value),
         ),
         const SizedBox(height: 40),
         _createFormTextField(
@@ -124,12 +109,12 @@ class SignUpFormState extends State<SignUpForm> {
     if (_formKey.currentState.validate()) {
       try {
         final app = await Firebase.initializeApp();
-        FirebaseAuth auth = FirebaseAuth.instanceFor(app: app);
-        UserCredential userCredential = await auth
-            .createUserWithEmailAndPassword(email: _email, password: _password);
+        var auth = FirebaseAuth.instanceFor(app: app);
+        var userCredential = await auth.signInWithEmailAndPassword(
+            email: _email, password: _password);
 
         if (userCredential != null) {
-          Navigator.popAndPushNamed(context, '/main');
+          Navigator.pushReplacementNamed(context, '/main');
         }
       } on FirebaseAuthException catch (e) {
         if (e.code == 'weak-password') {

@@ -1,11 +1,18 @@
+// Flutter imports:
+
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:hiking_dude_mobile/common/colors.dart';
+
+// Package imports:
 import 'package:firebase_core/firebase_core.dart';
-import 'package:hiking_dude_mobile/pages/menu/menu-page.dart';
-import 'package:hiking_dude_mobile/pages/login/login-page.dart';
-import 'package:hiking_dude_mobile/pages/onboarding/onboarding-page.dart';
-import 'package:hiking_dude_mobile/pages/sign-up/sign-up-page.dart';
-import 'pages/main-tabs/main-tabs.dart';
+
+// Project imports:
+import 'common/colors.dart';
+import 'pages/login/login_page.dart';
+import 'pages/main-tabs/main_tabs.dart';
+import 'pages/onboarding/onboarding_page.dart';
+import 'pages/sign_up/sign_up_page.dart';
+import 'services/navigation/routes.dart';
 
 void main() {
   runApp(App());
@@ -48,16 +55,15 @@ class _AppState extends State<App> {
       return SizedBox();
     }
 
-    ThemeData theme = ThemeData();
+    var theme = ThemeData();
     return MaterialApp(
         title: 'Hiking dude',
         routes: {
-          '/': (context) => Onboarding(),
-          '/main': (context) => MainTabs(),
-          '/login': (context) => LoginPage(),
-          '/sign-in': (context) => SignUpPage(),
-          '/boards': (context) => Menu(),
+          Routes.main: (context) => MainTabs(),
+          Routes.login: (context) => LoginPage(),
+          Routes.signUp: (context) => SignUpPage(),
         },
+        home: Onboarding(),
         color: AppColors.white,
         theme: theme.copyWith(
           backgroundColor: AppColors.white,

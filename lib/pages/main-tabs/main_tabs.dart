@@ -1,9 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hiking_dude_mobile/common/assets.dart';
-import 'package:hiking_dude_mobile/common/colors.dart';
-import 'package:hiking_dude_mobile/common/text-styles.dart';
-import 'package:hiking_dude_mobile/pages/home/index.dart';
+
+// Project imports:
+import '../../common/assets.dart';
+import '../../common/colors.dart';
+import '../../common/text_styles.dart';
+import '../home/home_page.dart';
 
 enum AppTabs { home, explore, myTrips }
 

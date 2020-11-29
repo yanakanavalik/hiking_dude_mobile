@@ -1,9 +1,13 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:hiking_dude_mobile/common/assets.dart';
-import 'package:hiking_dude_mobile/common/colors.dart';
-import 'package:hiking_dude_mobile/common/text-styles.dart';
-import 'package:hiking_dude_mobile/elements/button-rounded.dart';
-import 'package:hiking_dude_mobile/elements/paging.dart';
+
+// Project imports:
+import '../../common/assets.dart';
+import '../../common/colors.dart';
+import '../../common/text_styles.dart';
+import '../../elements/button_rounded.dart';
+import '../../elements/paging.dart';
+import '../../services/navigation/routes.dart';
 
 class Onboarding extends StatefulWidget {
   Onboarding();
@@ -56,10 +60,14 @@ class OnboardingState extends State<Onboarding> {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            ButtonRounded('SIGN UP',
-                                () => Navigator.pushNamed(context, '/sign-in')),
-                            ButtonRounded('LOGIN',
-                                () => Navigator.pushNamed(context, '/login'))
+                            ButtonRounded(
+                                'SIGN UP',
+                                () => Navigator.pushNamed(
+                                    context, Routes.signUp)),
+                            ButtonRounded(
+                                'LOGIN',
+                                () =>
+                                    Navigator.pushNamed(context, Routes.login))
                           ])
                     ])
               ],
@@ -74,7 +82,7 @@ class OnboardingState extends State<Onboarding> {
   }
 
   List<Widget> _buildOnboardingScreens() {
-    List<Widget> result = [];
+    var result = <Widget>[];
     const onboardingTextEntries = [
       'Create your trip plan with places, tickets and important notes',
       'Track the progress of the trip and make changes',

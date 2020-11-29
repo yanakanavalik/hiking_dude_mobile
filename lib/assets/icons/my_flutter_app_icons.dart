@@ -11,8 +11,10 @@
 ///      fonts:
 ///       - asset: fonts/MyFlutterApp.ttf
 ///
-/// 
 ///
+///
+
+// Flutter imports:
 import 'package:flutter/widgets.dart';
 
 class MyFlutterApp {
@@ -21,5 +23,9 @@ class MyFlutterApp {
   static const _kFontFam = 'MyFlutterApp';
   static const _kFontPkg = null;
 
-  static const IconData arrow_back = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData arrowBack = IconData(
+    0xe800,
+    fontFamily: _kFontFam,
+    fontPackage: _kFontPkg,
+  );
 }
